@@ -1,104 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Rizen Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizen B. Lapuz Portfolio</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
+    body { line-height:1.6; color:#333; background:#f9f9f9; }
+
+   
+    nav { position:fixed; top:0; left:0; width:100%; background:rgba(255,255,255,0.95); display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
+    nav .logo { font-size:1.6rem; font-weight:bold; color:#2c3e50; }
+    nav ul { display:flex; gap:1.8rem; list-style:none; }
+    nav ul li a { position:relative; font-weight:500; padding:0.4rem; text-decoration:none; color:#2c3e50; }
+    nav ul li a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:#3498db; transition:0.3s; }
+    nav ul li a:hover::after { width:100%; }
+
+    
+    header {
+      height:90vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                 url('files/pika.jpg') center/cover no-repeat;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:#fff;
+      padding:1rem;
+    }
+    header h1 { font-size:3rem; margin-bottom:1rem; text-shadow:2px 2px 8px rgba(0,0,0,0.7);}
+    header p { font-size:1.2rem; max-width:700px; text-shadow:1px 1px 6px rgba(0,0,0,0.6);}
+    .btn { display:inline-block; padding:0.8rem 1.5rem; margin:0.5rem; background:#3498db; color:#fff; border-radius:30px; font-weight:bold; transition:0.3s; text-decoration:none; }
+    .btn:hover { background:#2980b9; transform:scale(1.05); }
+
+    
+    section { padding:5rem 2rem; }
+    section h2 { text-align:center; font-size:2.5rem; margin-bottom:2rem; color:#2c3e50; }
+    .container { max-width:1000px; margin:0 auto; }
+
+    
+    .about-card { display:flex; flex-wrap:wrap; gap:2rem; background:#fff; padding:2rem; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.1); transition:transform 0.3s; }
+    .about-card:hover { transform:translateY(-5px); }
+    .about-photo { flex:1 1 250px; text-align:center; }
+    .about-photo img { border-radius:50%; width:200px; height:200px; object-fit:cover; border:5px solid #3498db; box-shadow:0 4px 15px rgba(0,0,0,0.2); }
+    .about-info { flex:2 1 400px; display:flex; flex-direction:column; gap:1.5rem; }
+    .info-box { background:#f4f4f4; padding:1rem 1.5rem; border-radius:12px; transition: background 0.3s, transform 0.3s; }
+    .info-box:hover { background:#3498db; color:#fff; transform:translateY(-3px); }
+    .info-box h3 { margin-bottom:0.5rem; }
+
+    
+    .projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.8rem; }
+    .project-card { background:#fff; padding:1.5rem; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); font-weight:bold; text-align:center; transition:0.3s; }
+    .project-card a { text-decoration:none; color:#2c3e50; display:block; }
+    .project-card:hover { background:#3498db; color:#fff; transform:translateY(-5px); }
+    .project-card:hover a { color:#fff; }
+
+    
+    footer { text-align:center; padding:2rem; background:#2c3e50; color:#fff; margin-top:2rem; }
+
+   
+    @media(max-width:768px){ .about-card{flex-direction:column; align-items:center;} }
+  </style>
 </head>
 <body>
-    <h2 style="color: #007bff;">Portfolio</h2>
-    <img src="files\rizen.jpg" alt="Rizen B. Lapuz" width="220" height="300">
-    <p><b>Rizen B. Lapuz</b>
-    <br>Sta. Cruz, Candating, Arayat, Pampanga <br>
-    <a href="https://www.google.com">rlapuz0693@iskwela.psau.edu.ph</a>
-        <br>09918002046</p>
-    <p> Welcome to my <b>Web System and Technology 1 Portfolio!</b> <br>This collection presents my activities and exercises, demonstrating my learning journey throughout the course.</p>
-    <hr>
- <h3>🌟 About Me</h3>
-    <p>
-       I'm someone who enjoy living to the fullest
-    </p>
 
-    <hr>
-    <h3><b>What I Believe In:</b> </h3>
-    <ul>
-        <li>I believe in myself</li>
-        <li>I believe that life should be experienced to the fullest</li>
-        <li>I believe in Appreciating all the small things in Life</li>
-    </ul>
+<nav>
+  <div class="logo">Rizen B. Lapuz</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#labs">Lab Tasks</a></li>
+  </ul>
+</nav>
 
-    <p>
-        I enjoy living my life the way I want to and helping others along the way
-    </p>
-    
-    <hr>
-    
-    <h3>🎓 Education</h3>
-    <ul>
-        <li><b>Senior High School:</b> Adelle Grace Montessori School incorporated.(Stem Strand)</li>
-        <li><b>Junior High School:</b> Camba National High School</li>
-        <li><b>Elementary:</b> Candating Elementary School</li>
-    </ul>
-    
-    <hr>
-    
-    <h3>💻 Languages I Used Before</h3>
-    <img src="files\python.jpg" alt="Python" width="150" height="150"> 
-    <img src="files\Javaa.webp" alt="Java" width="150" height="150">
-    <img src="files\html.webp" alt="HTML" width="150" height="150">
-    
-    <hr>
+<header>
+  <h1>Welcome to My Portfolio</h1>
+  <p>I'm Rizen, College Student, Learning to code</p>
+  <a href="#about" class="btn">About Me</a>
+  <a href="#labs" class="btn">Lab Tasks</a>
+</header>
 
-     <h2>📂 My Projects</h2>
-    
-    <h3>📘 Midterm</h3>
-    <p>Midterm Lab Task 1: <a href="files\lab1.html">My Resume</a>
-    <br>Midterm Lab Task 2: <a href="files\Lab 2.html">ORDERED and UNORDERED LIST</a>
-    <br>Midterm Lab Task 3: <a href="files\yowww.html">HTML forms</a>
-    <br>Midterm Lab Task 4: <a href="files\lab4.html">Image Mapping</a> </p>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="container about-card">
+    <div class="about-photo">
+      <img src="files/rizen.jpg" alt="Rizen B. Lapuz">
+    </div>
+    <div class="about-info">
+      <div class="info-box">
+        <h3>Personal Info</h3>
+        <p><b>Rizen B. Lapuz</b><br>Sta. Cruz, Candating, Arayat, Pampanga<br>
+        <a href="mailto:rlapuz0693@iskwela.psau.edu.ph">rlapuz0693@iskwela.psau.edu.ph</a><br>09918002046</p>
+      </div>
+      <div class="info-box">
+        <h3>Beliefs</h3>
+        <ul>
+          <li>I believe in myself</li>
+          <li>Life is to be experienced, and not to be accomplished</li>
+          <li>Appreciating the small things in life</li>
+        </ul>
+      </div>
+      <div class="info-box">
+  <h3>Education & Skills</h3>
+  <ul>
+    <li>Senior High: Adelle Grace Montessori School (STEM)</li>
+    <li>Junior High: Camba National High School</li>
+    <li>Elementary: Candating Elementary School</li>
+  </ul>
+  <p>Languages:</p>
+  <div class="lang-icons">
+    <img src="files/phyton.jpg" alt="Python">
+    <img src="files/Javaa.webp" alt="Java">
+    <img src="files/html.webp" alt="HTML">
+  </div>
+</div>
+</section>
 
-    <hr>
-    <h3>🎓 Finals</h3>
-    
-    <p>Final Lab Task 1: <a href="a">On going</a>
-        <br>Final Lab Task 2: <a href="a">On going</a>
-        <br>Final Lab Task 3: <a href="a">On going</a>
-        <br>Final Lab Task 4: <a href="a">On going</a>
-    <br><i>Coming soon...</i></p>
+<section id="labs">
+  <h2>Lab Tasks (Midterm)</h2>
+  <div class="container projects-grid">
+    <div class="project-card"><a href="files/lab1.html">Lab Task 1</a></div>
+    <div class="project-card"><a href="files/lab2.html">Lab Task 2</a></div>
+    <div class="project-card"><a href="files/lab3.html">Lab Task 3</a></div>
+    <div class="project-card"><a href="files/lab4.html">Lab Task 4</a></div>
+    <div class="project-card"><a href="files/lab5.html">Lab Task 5</a></div>
+    <div class="project-card"><a href="files/lab6.html">Lab Task 6</a></div>
+    <div class="project-card"><a href="files/lab7.html">Lab Task 7</a></div>
+    <div class="project-card"><a href="files/Stylesheet 1.html">Lab Task 8</a></div>
+  </div>
 
-    <hr>
-    <h3>❤️ I Love</h3>
-    <ul>
-        
-        <li>Gaming</li>
-        <li>Reading works of fiction</li>
-        <li>Anime</li>
-        <li>Movies and Tv Shows</li>
-    </ul>
-    <hr>
-    <h3>⚡ Fun Facts About Me</h3>
-    <ul>
-        <li>I'm an introvert </li>
-        <li>I have bad hearing</li>
-        <li>I can barely use my right eye without glasses</li>
-        <li>I'm a weeb</li>
-        <li>I'm kind</li>
-    </ul>
-    <hr>
-    <h3>📌 Skills</h3>
-    <ul class="skills">
-        <li>basic coding</li>
-        <li>speed cubing</li>
-        <li>chess</li>
-    </ul>
-    <hr>
-     <h2>📞 Connect With Me</h2>
-         <a href="https://www.facebook.com/rizen.b.lapuz"><img src="files\fb.png" alt="Facebook"width="200" height="200"></a>
-        
-    <hr>
+  <h2 style="margin-top:4rem;">Lab Tasks (Finals)</h2>
+  <div class="container projects-grid">
+    <div class="project-card"><a href="#">Final Lab Task 1 – ongoing</a></div>
+    <div class="project-card"><a href="#">Final Lab Task 2 – ongoing</a></div>
+    <div class="project-card"><a href="#">Final Lab Task 3 – ongoing</a></div>
+    <div class="project-card"><a href="#">Final Lab Task 4 – ongoing</a></div>
+  </div>
+</section>
+
+<footer>
+  2026 Rizen B. Lapuz - Coder - Cuber- Proofreader - Chess Player - Animal Lover
+</footer>
 
 </body>
 </html>
-
-
-
