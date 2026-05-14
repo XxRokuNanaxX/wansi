@@ -182,12 +182,29 @@
   <h2 style="margin-top:4rem;">Final Task</h2>
   <div class="container projects-grid">
     <div class="project-card"><a href="https://leeshawn-gomez.github.io/TaRoute-PSAU/">Final Task</a></div>
+    <div class="project-card" onclick="document.getElementById('videoModal').style.display='flex'" style="cursor:pointer"><a href="#" onclick="return false;">Documentation</a></div>
   </div>
 </section>
 
 <footer>
   2026 Rizen B. Lapuz - Coder - Cuber- Proofreader - Chess Player - Animal Lover
 </footer>
+
+
+<div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:999; justify-content:center; align-items:center;">
+  <div style="position:relative; width:90%; max-width:860px; background:#000; border-radius:12px; overflow:hidden; box-shadow:0 10px 40px rgba(0,0,0,0.6);">
+    <button onclick="document.getElementById('videoModal').style.display='none'; var f=document.getElementById('docVideo'); f.src=f.src;"
+      style="position:absolute; top:10px; right:14px; background:rgba(255,255,255,0.2); border:none; color:#fff; font-size:1.4rem; cursor:pointer; border-radius:50%; width:36px; height:36px; z-index:10; line-height:1;">&times;</button>
+    <div style="position:relative; padding-bottom:56.25%; height:0;">
+      <iframe id="docVideo"
+        src="https://drive.google.com/file/d/1O_x0XUFYCzpTCu8wbFs3v3faPkdbZy0W/preview"
+        style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
+        allow="autoplay"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
